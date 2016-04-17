@@ -16,10 +16,10 @@
     "persistent": true
   },
   "options_page": "src/options_custom/index.html",
-  "browser_action": {
+  "page_action": {
     "default_icon": "icons/icon19.png",
     "default_title": "SCStreamModifier",
-    "default_popup": "src/browser_action/browser_action.html"
+    "default_popup": "src/page_action/page_action.html"
   },
   "permissions": [
     "https://soundcloud.com/stream"
