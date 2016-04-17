@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "manifest_version": 2,
   "description": "An extension to remove elements from your SoundCloud Stream.",
-  "homepage_url": "",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
@@ -19,17 +18,16 @@
   "options_page": "src/options_custom/index.html",
   "browser_action": {
     "default_icon": "icons/icon19.png",
-    "default_title": "browser action demo",
+    "default_title": "SCStreamModifier",
     "default_popup": "src/browser_action/browser_action.html"
   },
   "permissions": [
-    "https://soundcloud.com/*",
-    ""
+    "https://soundcloud.com/stream"
   ],
   "content_scripts": [
     {
       "matches": [
-        "https://soundcloud.com/*"
+        "https://soundcloud.com/stream"
       ],
       "css": [
         "src/inject/inject.css"
