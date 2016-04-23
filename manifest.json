@@ -22,7 +22,9 @@
     "default_popup": "src/page_action/page_action.html"
   },
   "permissions": [
-    "https://soundcloud.com/stream"
+    "https://soundcloud.com/stream",
+    "tabs",
+    "storage"
   ],
   "content_scripts": [
     {
