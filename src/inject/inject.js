@@ -8,6 +8,11 @@ chrome.extension.sendMessage({}, function(response) {
 		console.log("[SCStreamModifier] Script successfully injected.");
 		// ----------------------------------------------------------
 
+		createButtons();
+
+		var removeButtons = document.getElementsByClassName("removeButton");
+		removeButtons.onclick = removeEntry;
+
 	}
 	}, 10);
 });
@@ -32,9 +37,22 @@ chrome.runtime.onMessage.addListener(
 
 function createButtons() {
 
-	var songs = document.getElementsByClassName("soundList__item");
-	for(var i; i<songs.length;i++){
-		
+	var streamEntries = document.getElementsByClassName("soundContext");
+	console.log(streamEntries);
+
+	for(var i = 0; i<streamEntries.length;i++){
+
+		var buttonNode = document.createElement("button");
+		buttonNode.appendChild(document.createTextNode("Remove"));
+		buttonNode.setAttribute("class", "removeButton")
+
+		streamEntries[i].appendChild(buttonNode);
 	}
+
+}
+
+function removeEntry() {
+
+	console.log("remove");
 
 }
